@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pastry Delight</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav id="navbar">
+    <div class="logo">Pastry Delight</div>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+    <ul id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>We bake with love and magic! At Pastry Delight, each treat is a handmade piece of joy. We use only the finest ingredients and the most creative minds to bring you the best pastries.</p>
+    <p>Welcome to Pastry Delight, where every pastry is made with passion, creativity, and love. Our mission is simple: to bring you the most delightful desserts that not only taste amazing but also look spectacular. From our signature cakes and cookies to our range of artisan pastries, each item is made from scratch with the highest quality ingredients. We understand that food is an experience, and we strive to create a welcoming atmosphere where you can experience the joy of indulgence. Whether you're treating yourself to a little sweetness or celebrating a milestone, our wide selection of pastries is crafted to make every moment memorable. Here at Pastry Delight, we are driven by the love for the craft, the joy of sharing delicious treats, and the excitement of making our customers smile. Join us, and let us add that extra sweetness to your day!</p>
+    <p>At Pastry Delight, we believe every bite should be a celebration. From melt-in-your-mouth cakes to handcrafted pastries, our treats are made with love, premium ingredients, and a dash of creativity. Whether you're celebrating a birthday, craving a sweet moment, or simply spoiling yourself, we’re here to make life a little more delicious. Come experience flavors that not only satisfy your sweet tooth—but warm your heart.</p>
+    <p>From traditional recipes to exciting new flavors, we are here to make every occasion a little sweeter. Join us in spreading happiness, one bite at a time!</p>
+  </section>
+
+  <!-- Shop Section -->
+  <section class="shop" id="shop">
+    <h2>Shop Now</h2>
+    <p>Discover a world of freshly baked delights. Our pastries are crafted with the finest ingredients to bring you a truly indulgent experience.</p>
+    <p>At Pastry Delight, we believe that desserts should not just be sweet, but also an experience to remember. Our wide selection of cakes, pastries, and treats are created with the finest ingredients, expertly crafted to bring joy to your taste buds. Whether you're celebrating a special occasion or simply treating yourself, every item in our shop is designed to satisfy your cravings and brighten your day. With a variety of flavors and designs to choose from, there’s something for everyone. From classic favorites to our innovative seasonal creations, you’ll find the perfect dessert that’s as delightful to the eyes as it is to the palate. Don’t wait – browse through our tempting collection and order your sweet indulgence now, because life is too short to miss out on these delicious moments!
+
+    </p>
+    <p>Order your favorites online and get them delivered to your doorstep for a sweet surprise every day!</p>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu" id="menu">
+    <h2>Menu</h2>
+    <p>Choose from a variety of delicious cakes and pastries! Each of them is made with care to bring you the perfect balance of taste and texture.</p>
+    <div class="cake-options">
+      <div class="cake-item">
+        <img src="imagescake1.jpg" alt="Chocolate Cake">
+        <h3>Chocolate Cake</h3>
+        <p>Rich, moist chocolate cake with layers of velvety chocolate cream.</p>
+        <label for="quantity1">Quantity: </label>
+        <input type="number" id="quantity1" name="quantity1" min="1" max="10" value="1" />
+        <button onclick="addToCart('Chocolate Cake', 15, document.getElementById('quantity1').value)">Add to Cart - $15</button>
+      </div>
+      <div class="cake-item">
+        <img src="imagescake2.jpg" alt="Strawberry Cake">
+        <h3>Strawberry Cake</h3>
+        <p>A light sponge cake with a delicious strawberry cream filling.</p>
+        <label for="quantity2">Quantity: </label>
+        <input type="number" id="quantity2" name="quantity2" min="1" max="10" value="1" />
+        <button onclick="addToCart('Strawberry Cake', 18, document.getElementById('quantity2').value)">Add to Cart - $18</button>
+      </div>
+      <div class="cake-item">
+        <img src="imagescake3.jpg" alt="Vanilla Cake">
+        <h3>Vanilla Cake</h3>
+        <p>Fluffy vanilla cake with a creamy buttercream frosting.</p>
+        <label for="quantity3">Quantity: </label>
+        <input type="number" id="quantity3" name="quantity3" min="1" max="10" value="1" />
+        <button onclick="addToCart('Vanilla Cake', 12, document.getElementById('quantity3').value)">Add to Cart - $12</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery" id="gallery">
+    <h2>Gallery</h2>
+    <p>Feast your eyes on our beautifully crafted pastries, from chocolate swirls to strawberry bliss. Our cakes and pastries are not just delicious but also works of art.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="imagescupcake.jpg" alt="Cupcake">
+        <h3>Cupcake Delight</h3>
+      </div>
+      <div class="gallery-item">
+        <img src="imagescheesecake.jpg" alt="Cheesecake">
+        <h3>Cheesecake Bliss</h3>
+      </div>
+      <div class="gallery-item">
+        <img src="imagescookie.jpg" alt="Cookie">
+        <h3>Chocolate Chip Cookie</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Reach out to order, inquire, or say hi! We’re always here to assist you. Email: hello@pastrydelight.com</p>
+    <form id="contact-form">
+      <input type="email" id="email" placeholder="Enter your email" required />
+      <textarea id="message" placeholder="Your message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Cart Section -->
+  <section class="cart" id="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <label for="address">Shipping Address:</label>
+    <textarea id="address" placeholder="Enter your address" required></textarea>
+    <button onclick="placeOrder()">Place Order</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Pastry Delight. Made with ❤️</p>
+  </footer>
+
+  <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
